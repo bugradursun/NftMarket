@@ -38,7 +38,8 @@ contract NftMarketplace is ReentrancyGuard {
         uint256 price
     );
 
-    mapping(address => mapping(uint256 => Listing)) private s_listings;
+    mapping(address => mapping(uint256 => Listing)) private s_listings; //NFT address => NFT TokenID => Listing
+    //1. mappingde nftleri tutuyoruz
     mapping(address => uint256) private s_proceeds; //BALANCE LARI BURADA TUT
 
     modifier isOwner(
